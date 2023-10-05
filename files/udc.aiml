@@ -9,27 +9,37 @@
   <!-- Handle user queries related to food delivery -->
   <category>
     <pattern>WHAT CAN I ORDER</pattern>
-    <template>RandomlySelectedResponse(
+    <template>
+      <random>
         <li>You have a world of options at your fingertips! From sushi to burgers, we've got it all.</li>
         <li>Our menu boasts a diverse range of cuisines - Italian, Chinese, Indian, Pakistani, and more!</li>
         <li>Feel free to ask about a specific cuisine, and I'll guide you to the best dishes.</li>
-    )</template>
+      </random>
+    </template>
   </category>
 
   <category>
-    <pattern>FIND ME * PAKISTANI RESTAURANTS NEARBY</pattern>
-    <template>RandomlySelectedResponse(
-        <li>Let's find you some great Pakistani food nearby! Please share your location or the type of Pakistani cuisine you're in the mood for.</li>
-        <li>I'll use my food radar to locate the best Pakistani restaurants in your area!</li>
-    )</template>
+    <pattern>FIND ME PAKISTANI RESTAURANTS NEARBY</pattern>
+ <template>
+      Here are some popular Pakistani restaurants in your area:
+      <ol>
+        <li>Salt Bae - Known for its BBQ dishes like Chicken Tikka and Beef Seekh Kebabs.</li>
+        <li>Lahore Grill - A local favorite for Pakistani BBQ cuisine.</li>
+        <li>Karachi Kitchen - Offers a variety of Pakistani dishes, including Biryani and Nihari.</li>
+        <li>Spice Heaven - Specializes in spicy Pakistani curries and kebabs.</li>
+        <li>Tandoori Delights - Famous for its Tandoori Roti and Paneer Tikka.</li>
+      </ol>
+    </template>
   </category>
 
   <category>
     <pattern>HOW LONG WILL IT TAKE FOR MY ORDER TO ARRIVE</pattern>
-    <template>RandomlySelectedResponse(
+    <template>
+      <random>
         <li>Delivery times can vary based on the restaurant and your location.</li>
         <li>If you tell me which restaurant you're interested in, I can provide you with an estimated delivery time.</li>
-    )</template>
+      </random>
+    </template>
   </category>
 
   <category>
@@ -45,44 +55,54 @@
   <!-- Handle user preferences and recommendations -->
   <category>
     <pattern>I'M IN THE MOOD FOR PAKISTANI BBQ</pattern>
-    <template>RandomlySelectedResponse(
+    <template>
+      <random>
         <li>Great choice! Let's explore Pakistani BBQ cuisine together. How about trying Seekh Kebabs from <set>recommended_restaurant=<srai>RECOMMEND_RESTAURANT</srai></set>? It's a crowd favorite!</li>
         <li>Pakistani BBQ cuisine is delightful! I recommend Chicken Boti from <get>cuisine</get>. Would you like to know more about it?</li>
-    )</template>
+      </random>
+    </template>
   </category>
 
   <category>
     <pattern>RECOMMEND A POPULAR PAKISTANI BBQ DISH</pattern>
-    <template>RandomlySelectedResponse(
+    <template>
+      <random>
         <li>One of the most popular dishes in Pakistani BBQ cuisine is Chicken Tikka. It's a culinary masterpiece!</li>
         <li>For an unforgettable Pakistani BBQ experience, you must try Beef Seekh Kebabs from <set>recommended_restaurant=<srai>RECOMMEND_RESTAURANT</srai></set>.</li>
-    )</template>
+      </random>
+    </template>
   </category>
 
   <!-- Handle generic greetings -->
   <category>
     <pattern>HELLO</pattern>
-    <template>RandomlySelectedResponse(
+    <template>
+      <random>
         <li>Hello there! Ready to embark on a culinary adventure?</li>
         <li>Hi! Let's explore the world of Pakistani flavors together!</li>
-    )</template>
+      </random>
+    </template>
   </category>
 
   <category>
     <pattern>HI</pattern>
-    <template>RandomlySelectedResponse(
+    <template>
+      <random>
         <li>Hi! Hungry for some good Pakistani food? You're in the right place!</li>
         <li>Hi there! I'm your Pakistani food guide. What can I assist you with today?</li>
-    )</template>
+      </random>
+    </template>
   </category>
 
   <!-- Handle fallback responses -->
   <category>
     <pattern>*</pattern>
-    <template>RandomlySelectedResponse(
+    <template>
+      <random>
         <li>I apologize, but I didn't quite catch that. Please rephrase your question or ask me something related to Pakistani food delivery.</li>
         <li>Oops! It seems I missed that. Please try asking a food-related question, and I'll do my best to help.</li>
-    )</template>
+      </random>
+    </template>
   </category>
 
   <!-- Define wildcard patterns for cuisines -->
@@ -100,10 +120,12 @@
   <!-- Define a category for recommending a Pakistani restaurant based on cuisine -->
   <category>
     <pattern>RECOMMEND_RESTAURANT</pattern>
-    <template>RandomlySelectedResponse(
+    <template>
+      <random>
         <li>How about trying Pakistani BBQ cuisine from Salt Bae? They offer an exceptional dining experience!</li>
         <li>You might enjoy Pakistani BBQ cuisine at Lahore Grill. It's a local favorite!</li>
-    )</template>
+      </random>
+    </template>
   </category>
 
   <!-- Define a topic for managing user preferences -->
