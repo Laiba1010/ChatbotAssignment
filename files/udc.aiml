@@ -42,9 +42,11 @@
     </template>
   </category>
 
-  <category>
+   <category>
     <pattern>TELL ME MORE ABOUT Salt Bae</pattern>
-    <template><srai>RESTAURANT_INFO</srai></template>
+    <template>
+      Salt Bae is a renowned Pakistani restaurant known for its exquisite BBQ dishes, including Chicken Tikka and Beef Seekh Kebabs. Customers often praise the restaurant's flavorful cuisine and efficient service. The average delivery time from Salt Bae is approximately 30 minutes to 45 minutes, depending on your location.
+    </template>
   </category>
 
   <category>
@@ -64,14 +66,16 @@
   </category>
 
   <category>
-    <pattern>RECOMMEND A POPULAR PAKISTANI BBQ DISH</pattern>
-    <template>
-      <random>
-        <li>One of the most popular dishes in Pakistani BBQ cuisine is Chicken Tikka. It's a culinary masterpiece!</li>
-        <li>For an unforgettable Pakistani BBQ experience, you must try Beef Seekh Kebabs from <set>recommended_restaurant=<srai>RECOMMEND_RESTAURANT</srai></set>.</li>
-      </random>
-    </template>
-  </category>
+  <pattern>RECOMMEND A POPULAR PAKISTANI BBQ DISH</pattern>
+  <template>
+    <set>recommended_restaurant=Salt Bae</set>
+    <random>
+      <li>One of the most popular dishes in Pakistani BBQ cuisine is Chicken Tikka at <get>recommended_restaurant</get>. It's a culinary masterpiece!</li>
+      <li>For an unforgettable Pakistani BBQ experience at <get>recommended_restaurant</get>, you must try Beef Seekh Kebabs.</li>
+    </random>
+  </template>
+</category>
+
 
   <!-- Handle generic greetings -->
   <category>
